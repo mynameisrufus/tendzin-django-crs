@@ -1,0 +1,5 @@
+#!/bin/bash
+
+autopep8 --in-place --aggressive --aggressive --recursive project
+eslint project/frontend/src/ --fix
+prettier project/frontend/src/**/* --write
