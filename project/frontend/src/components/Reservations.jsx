@@ -68,16 +68,16 @@ class Reservations extends Component {
 
     return (
       <Content heading={this.heading}>
-        <table className="table is-striped">
+        <table className="table">
           <thead>
             <tr>
               <th>Booking ID</th>
               <th>Booking Name</th>
-              <th>Check In</th>
-              <th>Check Out</th>
-              <th>Status</th>
-              <th>Property</th>
-              <th>Room Type</th>
+              <th className="is-hidden-touch">Check In</th>
+              <th className="is-hidden-touch">Check Out</th>
+              <th className="is-hidden-touch">Status</th>
+              <th className="is-hidden-touch">Property</th>
+              <th className="is-hidden-touch">Room Type</th>
             </tr>
           </thead>
           <tbody>
@@ -92,15 +92,15 @@ class Reservations extends Component {
                   {reservation.booking_first_name}{" "}
                   {reservation.booking_last_name}
                 </td>
-                <td>{reservation.check_in}</td>
-                <td>{reservation.check_out}</td>
-                <td>{reservation.status}</td>
-                <td>
+                <td className="is-hidden-touch">{reservation.check_in}</td>
+                <td className="is-hidden-touch">{reservation.check_out}</td>
+                <td className="is-hidden-touch">{reservation.status}</td>
+                <td className="is-hidden-touch">
                   <Link to={`/properties/${reservation.room_type.property.id}`}>
                     {reservation.room_type.property.name}
                   </Link>
                 </td>
-                <td>
+                <td className="is-hidden-touch">
                   <Link to={`/room-types/${reservation.room_type.id}`}>
                     {reservation.room_type.name}
                   </Link>

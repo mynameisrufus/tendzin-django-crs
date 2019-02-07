@@ -64,30 +64,20 @@ class Calendar extends Component {
 
     return (
       <div className="datepicker">
+        <nav className="pagination">
+          <a className="pagination-previous" onClick={() => this.previous()}>
+            Previous
+          </a>
+          <a className="pagination-next" onClick={() => this.next()}>
+            Next month
+          </a>
+        </nav>
+
         <div className="datepicker-months">
           {months.map((month, i) => (
             <div key={i} className="datepicker-month">
-              <div className="datepicker-nav">
-                {i == 0 && (
-                  <a
-                    className="button is-small"
-                    onClick={() => this.previous()}
-                  >
-                    <span className="icon is-small">
-                      <i className="fas fa-angle-left" />
-                    </span>
-                  </a>
-                )}
-                <div className="datepicker-nav-date">
-                  {month.date.format("MMMM YYYY")}
-                </div>
-                {i == 1 && (
-                  <a className="button is-small" onClick={() => this.next()}>
-                    <span className="icon is-small">
-                      <i className="fas fa-angle-right" />
-                    </span>
-                  </a>
-                )}
+              <div className="datepicker-heading">
+                {month.date.format("MMMM YYYY")}
               </div>
               <div className="datepicker-days">
                 {dows.map(dow => (

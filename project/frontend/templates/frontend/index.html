@@ -22,18 +22,15 @@
       flex: 50%;
       padding: 0.8rem 3px;
     }
-    .datepicker-nav {
+    @media only screen and (max-width : 768px) {
+      .datepicker-month {
+        flex: 100%;
+      }
+    }
+    .datepicker-heading {
       display: flex;
-      flex-direction: row;
       font-weight: bold;
-    }
-    .datepicker-nav-date {
-      display: flex;
-      flex: 50%;
       justify-content: center;
-    }
-    .datepicker-nav-arrow {
-      border: 1px solid;
     }
     .datepicker-weekdays {
       display: flex;

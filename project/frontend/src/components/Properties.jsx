@@ -76,7 +76,7 @@ class Properties extends Component {
       <Content heading={this.heading}>
         <div className="columns">
           <div className="column">
-            <table className="table is-striped">
+            <table className="table">
               <tbody>
                 {results.map(property => (
                   <tr key={property.id}>

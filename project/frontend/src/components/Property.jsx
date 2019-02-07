@@ -82,7 +82,7 @@ class Property extends Component {
       <Content heading={heading}>
         <div className="columns">
           <div className="column">
-            <table className="table is-striped">
+            <table className="table">
               <thead>
                 <tr>
                   <th>Room Types</th>

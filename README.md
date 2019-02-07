@@ -1,16 +1,27 @@
 # Tendzin Django CRS (Central Reservation System)
 
-## Heroku Deploy
+## Heroku Initial Deploy
 
 ```
 heroku create
 heroku buildpacks:set heroku/python
 heroku config:set TENDZIN_LOGO_URL=/static/frontend/tendzin-logo.png TENDZIN_API_KEY=xxxxx
 git checkout -b deploy
-yarn build
+npm run build
 git add -f project/frontend/static/frontend/main.js
 git commit -m "commit compiled js"
 git push heroku deploy:master
+```
+
+## Heroku Deploy
+
+```
+git checkout deploy
+git reset --hard master
+npm run build
+git add -f project/frontend/static/frontend/main.js
+git commit -m "commit compiled js"
+git push heroku deploy:master -f
 ```
 
 ## Local Development
