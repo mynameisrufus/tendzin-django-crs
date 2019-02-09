@@ -7,6 +7,7 @@ heroku create
 heroku buildpacks:set heroku/python
 heroku config:set TENDZIN_LOGO_URL=/static/frontend/tendzin-logo.png TENDZIN_API_KEY=xxxxx
 git checkout -b deploy
+npm install
 npm run build
 git add -f project/frontend/static/frontend/main.js
 git commit -m "commit compiled js"
